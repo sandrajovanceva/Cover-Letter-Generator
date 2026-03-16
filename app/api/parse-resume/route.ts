@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
-import pdf from "pdf-parse";
 
 export const runtime = "nodejs";
+
+// Use require to avoid needing type declarations for pdf-parse (no @types package)
+const pdf = require("pdf-parse") as (buffer: Buffer) => Promise<{ text: string }>;
 
 export async function POST(req: Request) {
   try {
