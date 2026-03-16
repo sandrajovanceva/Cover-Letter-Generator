@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import pdf from "pdf-parse";
-import { Document, Packer } from "docx";
 
 export const runtime = "nodejs";
 
